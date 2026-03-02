@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Cumpleaños</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+
+<style>
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Press Start 2P', monospace;
+  background-color: #ffeef0;
+  padding: 50px 0;
+}
+
+/* CARTA (ahora como rectángulo) */
+#paper {
+  width: 500px;
+  max-width: 90%;
+  height: 400px;  /* grande para leer toda la carta */
+  background: #cc3366;
+  border: 6px solid #cc3366;  /* borde que simula sobre */
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  
+  /* caída desde arriba */
+  transform: translateY(-800px) rotate(-5deg);
+  animation: dropPaper 1s ease-out forwards;
+}
+
+/* TEXTO */
+.letter p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.signature {
+  margin-top: 20px;
+  text-align: right;
+}
+
+/* ANIMACIÓN DROP */
+@keyframes dropPaper {
+  0% {
+    transform: translateY(-800px) rotate(-10deg);
+  }
+  60% {
+    transform: translateY(30px) rotate(5deg);
+  }
+  80% {
+    transform: translateY(-10px) rotate(-3deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+
+/* el primero */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffeef0;
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+    #message {
+  font-size: 2.5rem;;
+  text-align: center;
+  color: #cc3366;
+  margin-bottom: 30px;
+  animation: slideIn 2s ease-out;
+  text-shadow: 2px 2px 0px #ffa0c4;
+}
+    #card {
+  width: 70%;
+  max-width: 800px;
+  height: 60vh;
+  margin: 40px 0;
+  background: #fff8e7;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  overflow-y: auto;
+  animation: openLetter 2s forwards 2s;
+}
+
+.letter p {
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes cardAnimation {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+	
+	
+/* imagenes */
+
+
+/* Contenedor de las imágenes a los lados de la carta */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* espacio entre las imágenes y la carta */
+}
+
+/* Imágenes laterales */
+.side-image {
+  width: 150px;  /* tamaño de las imágenes laterales */
+  height: auto;
+  margin: 0 20px;  /* espacio entre las imágenes y la carta */
+}
+
+/* Contenedor de la carta (ya ajustado) */
+#paper {
+  width: 500px;
+  max-width: 90%;
+  height: 400px;
+  background: #fffdf9;
+  border: 6px solid #cc3366;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  transform: translateY(-800px) rotate(-5deg);
+  animation: dropPaper 1s ease-out forwards;
+}
+
+/* Imagen extra debajo de la carta */
+div[style*="text-align: center; margin-top: 20px;"] img {
+  width: 100%;
+  max-width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+.side-image {
+  border: 4px solid transparent;
+}
+
+.side-image:hover {
+  border: 4px solid #cc3366;
+  box-shadow: 
+    4px 4px 0px #000,
+    8px 8px 0px #cc3366;
+}
+
+
+
+
+#floatingText {
+  position: absolute;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  color: #cc3366;
+  text-shadow: 2px 2px #000;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.float-animation {
+  animation: floatUp 0.8s steps(5) forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+	 
+	 
+  <div id="message"> ₊˚⊹ᰔ.✦ ݁˖ ¡Japi cum Inzunza! ♡ ── .✦ 
+  
+  <h1> ꉂ(˵˃ ᗜ ˂˵) </h1>
+  </div>
+  
+<button onclick="document.getElementById('bgMusic').play()">
+  🎵 Play music
+</button>
+
+<audio id="bgMusic" loop>
+  <source src="cancion.mp3" type="audio/mpeg">
+</audio>
+
+
+
+  <img src="https://media1.tenor.com/m/YtlrYCAHtoIAAAAC/mha-bkdk.gif" 
+     style="width:2000px; max-width:100%; display:block; margin:1px auto;">
+	 
+<div class="image-container">
+  <img src="speed.jpeg" class="side-image left" alt="Imagen izquierda">
+  
+  <div id="paper">
+  <div class="letter">
+		
+	<h2> ★ </h2>
+      <h3>Oh pookie. My dear sigma pookie,</h3>
+      
+	 <p>
+	 
+	</p>
+	-
+    <p>
+      Bendecido el día en el que naciste. Espero que puedas sentir puramente, y con todo tu corazón, que este día merece de ser celebrado por todas las personas que hemos tenido el placer de entrar a tu vida; y por supuesto, que puedas reconocer la alegría de tomarte a ti mismo de la mano por ahora 20 años. Créeme que deseo siempre que te aceptes y te ames tanto como yo lo hago y mucho más. 
+    </p>
+
+    <p>
+	Ahora bien, mis recuerdos del día en que te conocí son muy escasos, pero recuerdo perfectamente el verte sentado en la thrifty, las notificaciones en mi celular de amigas pidiendo perdón por ir tarde, y el nerviosismo de conocer a alguien nuevo sin un intermediario. Nuestra interacción fue nerviosa, y no tenía ni idea de lo importante que serías desde ese momento.    
+	</p>
+
+    <p>
+      Intento no ser codiciosa y entristecerme demasiado por no verte todos los días, como solía ser. Fueron tres años (un poquito más, un poquito menos) de pasar mínimo 7 horas a tu lado cada día. Tu compañía era de esas cosas que tomas por adelantado, de esas que disfrutas sin que te pase por la cabeza que, algún día, podrían no estar. Nuestra amistad no es trágica, en absoluto. Somos afortunados de estar “a un clic de distancia”, sin embargo tengo que admitir que aún así desearía tenerte a 10 minutos de distancia y pasar tanto tiempo juntos que surjan momentos de aburrimiento compartido, y poder saborearlos sin la presión de saber que no volveré a estar contigo hasta las siguientes vacaciones. La verdad es que te extraño a mares y me arrepiento de no haber sido más consciente de los últimos días contigo antes de partir, pero intento aceptar que la juventud suele moverse arrasando con todo sin mirar atrás. 
+    </p>
+
+    <p>
+     Sé que las cosas son difíciles de vuelta en Culiacán. Es una situación podrida y asquerosamente complicada. Sin embargo, espero que sientas que la noche se aleja ahora que te liberaste de ese trabajo y tienes tiempo para existir con más paz, como siempre debió ser para nosotros los humanos, y me mantengo emocionada por que me cuentes más de tus planes en la escuela de veterinaria. Es una disciplina noble, compasiva y de estómago fuerte, y sonrío al pensar en tu decisión porque tan solo tiene sentido con tu forma de ser. 
+    </p>
+
+    <p>
+      Las vacaciones de semana santa están cada vez más cerca, y solo me dieron una semana, pero estoy preparando la sonrisa para verte de nuevo en donde sea que vayas a estar. 
+    </p>
+
+    <p>
+      Ahora. Let’s address the elephant in the room. 20 añotes. Twenty, not twenteen. 
+    </p>
+
+    <p>
+      Inzunza, los 20 años no son la sepultura de la juventud en absoluto. Es más, me atrevo a declarar que a los 20, la juventud se encuentra apenas en sus primeros pasos. La edad no es más que el tiempo pasando, y el tiempo pasando no significa más que el universo guardando tus secretos. El impulso es fuerte y se nos inculca, pero no tienes que correr. Vive a tu propio ritmo y creando tus propias reglas, pues la vida es una oportunidad única. 
+    </p>
+
+    <p>
+      Te deseo todo el éxito (el éxito es construido por uno mismo) en tu vida, y espero poder estar presente en todos tus momentos determinantes, pues no me imagino quién sería hoy de no haberte conocido.
+    </p>
+
+    <p class="signature">
+      Con mucho, muchísimo amor,<br>
+      tu sigmasigmaboii sigmaboiii sigma sigma boii </p>
+ 
+    </div>
+	</div>
+	
+	  <img src="tongue.jpeg" class="side-image right" alt="Imagen derecha">
+	    
+  </div>
+
+<div style="text-align: center; margin-top: 20px;">
+  <img src="rats2gether.jpeg" style="max-width: 90%; display: block; margin: 0 auto;">
+</div>
+
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+window.addEventListener("load", function() {
+  const duration = 3 * 1000;
+  const end = Date.now() + duration;
+
+  (function frame() {
+    confetti({
+      particleCount: 7,
+      angle: 60,
+      spread: 70,
+      origin: { x: 0 }
+    });
+    confetti({
+      particleCount: 7,
+      angle: 120,
+      spread: 70,
+      origin: { x: 1 }
+    });
+
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+  })();
+});
+
+
+
+</script>
+
+<audio id="coinSound">
+  <source src="coin.mp3" type="audio/mpeg">
+</audio>
+
+<div id="floatingText">+100 sigma</div>
+
+
+<script>
+const paper = document.getElementById("paper");
+const coin = document.getElementById("coinSound");
+const floatingText = document.getElementById("floatingText");
+
+paper.addEventListener("click", (e) => {
+  // sonido
+  coin.currentTime = 0;
+  coin.play();
+
+  // posicionar
+  floatingText.style.left = e.pageX + "px";
+  floatingText.style.top = e.pageY + "px";
+
+  // quitar clase anterior
+  floatingText.classList.remove("float-animation");
+
+  // forzar reflow
+  void floatingText.offsetWidth;
+
+  // agregar animación
+  floatingText.classList.add("float-animation");
+});
+</script>
+
+
+
+</body>
+</html>
